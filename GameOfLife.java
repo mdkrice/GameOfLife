@@ -73,7 +73,7 @@ public class GameOfLife {
 		// TODO: Implement this method		
 
 		for(int i = 0; i <= world.length i++)	{
-			for (int e = 0; e <= world.length; e++)	{
+			for (int e = 0; e <= world[i].length; e++)	{
 				world[i][e] = false;
 			}
 		}
@@ -362,5 +362,15 @@ public class GameOfLife {
 				//otherwise if the cell is dead.
 
 		//print out the number of cells alive.
+	}
+	private static void displayMenu() {
+		System.out.println("Select a pattern of life for the world");
+		System.out.println("1 - Glider");
+		System.out.println("2 - Beacon");
+		System.out.println("3 - Boat");
+		System.out.println("4 - R-pentomino");
+		System.out.println("5 - Random");
+		System.out.println("9 - Exit");
+		System.out.print("Choice:");	
 	}
 }
