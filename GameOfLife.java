@@ -31,13 +31,20 @@ public class GameOfLife {
 	 * @param args UNUSED
 	 */    
 	public static void main(String[] args){
-
+		Scanner scnr = new Scanner(System.in);
 		//declare local variables
-
+		int userInput;
 		// Display Welcome message        
-
-			//menu choices      
-
+		System.out.println("Welcome to the Game of Life");
+			//menu choices
+		do {
+		displayMenu();
+		userInput = scnr.nextInt();
+		if (scnr.hasNextInt())
+			userInput = scnr.nextInt();
+		else
+			scnr.next();
+		}while((userInput > 5 || userInput < 1) && userInput != 9);
 				// check for integer input
 
 
